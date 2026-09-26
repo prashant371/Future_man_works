@@ -1,0 +1,165 @@
+/* ═══════════════════════════════════════════════════════════
+   Auth Pages — Login & Register Shared Styles
+   ═══════════════════════════════════════════════════════════ */
+
+.authPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Animated Background Orbs ────────────────────────────── */
+.bgOrb1,
+.bgOrb2,
+.bgOrb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.bgOrb1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-primary);
+  top: -10%;
+  left: -5%;
+  animation: orbFloat1 12s ease-in-out infinite;
+}
+
+.bgOrb2 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-secondary);
+  bottom: -10%;
+  right: -5%;
+  animation: orbFloat2 15s ease-in-out infinite;
+}
+
+.bgOrb3 {
+  width: 200px;
+  height: 200px;
+  background: #9c27b0;
+  top: 50%;
+  right: 20%;
+  animation: orbFloat3 10s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 15px) scale(0.95); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 20px) scale(1.1); }
+  66% { transform: translate(15px, -15px) scale(0.9); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.15); }
+}
+
+/* ── Auth Container ──────────────────────────────────────── */
+.authContainer {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ── Brand ────────────────────────────────────────────────── */
+.brand {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.logoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent-primary), #5a52d5);
+  box-shadow: var(--shadow-glow);
+  margin-bottom: var(--space-md);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.brandTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-xs);
+}
+
+.brandSubtitle {
+  font-size: 0.9375rem;
+  color: var(--text-tertiary);
+  font-weight: 400;
+}
+
+/* ── Form Card ────────────────────────────────────────────── */
+.authForm {
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* ── Error Banner ─────────────────────────────────────────── */
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 14px;
+  background: rgba(239, 83, 80, 0.1);
+  border: 1px solid rgba(239, 83, 80, 0.25);
+  border-radius: var(--radius-md);
+  color: var(--accent-danger);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* ── Auth Switch Link ─────────────────────────────────────── */
+.authSwitch {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-top: var(--space-lg);
+}
+
+.authSwitch a {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.authSwitch a:hover {
+  text-decoration: underline;
+}
